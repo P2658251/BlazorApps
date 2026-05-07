@@ -9,6 +9,10 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
+@if (currentCount % 10 == 0 && currentCount != 0)
+{
+    <p>Congratulations! You've reached a multiple of 10!</p>
+}
 @code {
     private int currentCount = 0;
 
