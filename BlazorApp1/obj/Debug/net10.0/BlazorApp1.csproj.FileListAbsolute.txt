@@ -83,3 +83,4 @@
 /Users/edwardcooper/BlazorApps/BlazorApp1/obj/Debug/net10.0/BlazorApp1.pdb
 /Users/edwardcooper/BlazorApps/BlazorApp1/obj/Debug/net10.0/BlazorApp1.genruntimeconfig.cache
 /Users/edwardcooper/BlazorApps/BlazorApp1/obj/Debug/net10.0/ref/BlazorApp1.dll
+/Users/edwardcooper/BlazorApps/BlazorApp1/obj/Debug/net10.0/BlazorApp1.sourcelink.json
