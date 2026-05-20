@@ -5,8 +5,14 @@
 
 <h1>Input</h1>
 
-<input type="text" class="form-control" placeholder="Type something..." @bind="userInput" />
-
+<input type="text" class="form-control" placeholder="Type something..." @onchange="OnUserInputChanged" />
+<p>You entered: @text</p>
 @code {
+    string text = "";
     private string userInput = string.Empty;
+
+    private void OnUserInputChanged(ChangeEventArgs e)
+    {
+        text = e.Value?.ToString() ?? string.Empty;
+    }
 }
