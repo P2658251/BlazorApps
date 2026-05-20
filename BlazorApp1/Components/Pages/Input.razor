@@ -8,11 +8,12 @@
 <input type="text" class="form-control" placeholder="Type something..." @oninput="OnUserInputChanged" />
 <p>You entered: @text</p>
 
-<div style="background-color:green" @onmouseover="OnMouseOver" @onmouseout="OnMouseOut"> @divText  </div>
+<div style="@divStyle" @onmouseover="OnMouseOver" @onmouseout="OnMouseOut"> @divText  </div>
 @code {
     string text = "";
     string divText = "Mouse is outside the div.";
     private string userInput = string.Empty;
+    private string divStyle = "background-color:green; width:200px; height:100px;";
 
     private void OnUserInputChanged(ChangeEventArgs e)
     {
@@ -22,10 +23,12 @@
     private void OnMouseOver()
     {
         divText = "Mouse is over the div!";
+        divStyle = "background-color:lightpink; width:400px; height:300px;";
     }
 
     private void OnMouseOut()
     {
         divText = "Mouse is outside the div.";
+        divStyle = "background-color:green; width:200px; height:100px;";
     }
 }
