@@ -1,6 +1,9 @@
-<button @onclick="OnClick"> Click me!</button>
+<button @onclick="OnClick"> @ChildContent </button>
 
 @code {
     [Parameter]
     public EventCallback<MouseEventArgs> OnClick { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
 }
