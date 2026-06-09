@@ -1,4 +1,4 @@
-<button @onclick="OnClick"> @ChildContent </button>
+<button @onclick="OnClick" @attributes="AdditionalAttributes"> @ChildContent </button>
 
 @code {
     [Parameter]
@@ -6,4 +6,7 @@
 
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> AdditionalAttributes { get; set; }
 }
