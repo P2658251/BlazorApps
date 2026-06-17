@@ -1,4 +1,5 @@
 @page "/todo"
+@rendermode InteractiveServer
 
 <h3>To-Do List</h3>
 
@@ -11,12 +12,22 @@
     }
 </ul>
 
+<input @bind="newTaskTitle" />
+<button class="btn btn-primary" @onclick="AddTask">Add Task</button>
+
 @code {
-    public class TaskItem
-    {
+    private string newTaskTitle = string.Empty;
+    public class TaskItem{
+    
         public string Title { get; set; }
         public bool IsCompleted { get; set; }
     }
     
     List<TaskItem> tasks = new List<TaskItem>();
+
+  private void AddTask()
+{
+    tasks.Add(new TaskItem { Title = newTaskTitle });
+    newTaskTitle = string.Empty;
+}
 }
