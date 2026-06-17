@@ -1,0 +1,22 @@
+@page "/todo"
+
+<h3>To-Do List</h3>
+
+<ul class="list-group">
+    @foreach (var task in tasks)
+    {
+        <li>
+            @task.Title
+        </li>
+    }
+</ul>
+
+@code {
+    public class TaskItem
+    {
+        public string Title { get; set; }
+        public bool IsCompleted { get; set; }
+    }
+    
+    List<TaskItem> tasks = new List<TaskItem>();
+}
